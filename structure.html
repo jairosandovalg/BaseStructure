@@ -6,10 +6,12 @@
 {# - Validaciones Nativas (HTML5 & Regex): https://developer.mozilla.org/    #}
 {# ========================================================================= #}
 
-<!DOCTYPE html> {#Indicarle al navegador web la versión de HTML(W3C) se está utilizando para que pueda renderizar la página.#} 
+{# NOTA TÉCNICA: Le indica al navegador la versión de HTML (W3C) utilizada para evitar el 'Quirks Mode' #}
+<!DOCTYPE html> 
 <html lang="es">
 <head>
-    <meta charset="UTF-8"> {#Codificación de carácteres UTF-8(evita que se rompan las tildes, eñes, caracteres especiales al renderizar la página o el PDF)#}
+    {# NOTA TÉCNICA: Configura UTF-8 para evitar que se rompan las tildes, eñes o caracteres especiales en la web/PDF #}
+    <meta charset="UTF-8"> 
     <title>Panel de Pruebas de Ruta</title>
 </head>
 <body>
@@ -32,3 +34,4 @@
       </tr>
   </table>
 </body>
+</html>
