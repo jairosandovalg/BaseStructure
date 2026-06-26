@@ -6,8 +6,10 @@
 {# - Validaciones Nativas (HTML5 & Regex): https://developer.mozilla.org/    #}
 {# ========================================================================= #}
 
+{# thead -> table head #}
+{# tbody -> table body#}
 {# tr -> table row #}
-{# th -> table head #}
+{# th -> celda de encabezado #}
 {# td -> table data #}
 
 {# NOTA TÉCNICA: Le indica al navegador la versión de HTML (W3C) utilizada para evitar el 'Quirks Mode' #}
@@ -17,25 +19,64 @@
     {# NOTA TÉCNICA: Configura UTF-8 para evitar que se rompan las tildes, eñes o caracteres especiales en la web/PDF #}
     <meta charset="UTF-8"> 
     <title>Panel de Pruebas de Ruta</title>
+    <style>
+        /* --- ESTILOS PARA OTRAS ÁREAS (Diseño básico de reporte) --- */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Une los bordes para que parezca un reporte de Excel */
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+        /* Estilo exclusivo para la cabecera usando thead */
+        thead {
+            background-color: #2c3e50; /* Color oscuro ejecutivo */
+            color: white;
+        }
+
+        th, td {
+            padding: 12px; /* Espaciado interno para que respire el texto */
+            text-align: left;
+            border-bottom: 1px solid #ddd; /* Línea divisoria sutil */
+        }
+
+        /* Efecto cebra para las filas del cuerpo (tbody) */
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Resalta la fila si pasas el mouse por encima (Solo vista Web) */
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
+
+  <h2>Reporte de Stock de Repuestos</h2>
+
   <table>
-      <tr>
-          <th>Código</th>
-          <th>Repuesto</th>
-          <th>Stock</th>
-      </tr>
-  
-      <tr>
-          <td>A-102</td>
-          <td>Filtro de Aceite Audi</td>
-          <td>15</td>
-      </tr>
-      <tr>
-          <td>VW-505</td>
-          <td>Pastillas de Freno VW</td>
-          <td>8</td>
-      </tr>
+      <thead>
+          <tr>
+              <th>Código</th>
+              <th>Repuesto</th>
+              <th>Stock</th>
+          </tr>
+      </thead>
+   
+      <tbody>
+          <tr>
+              <td>A-102</td>
+              <td>Filtro de Aceite Audi</td>
+              <td>15</td>
+          </tr>
+          <tr>
+              <td>VW-505</td>
+              <td>Pastillas de Freno VW</td>
+              <td>8</td>
+          </tr>
+      </tbody>
   </table>
+
 </body>
 </html>
