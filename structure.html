@@ -73,7 +73,15 @@
         <div class="col-md-3">                /*Es una columna que, en pantallas medianas o grandes (md), ocupará 3 de los 12 espacios disponibles del ancho total. Es decir, ocupará exactamente el 25% del ancho de la pantalla.*/ 
                                               /*En pantallas móviles, por defecto, se adaptará para ocupar el 100% para que se lea mejor.*/      
             <label class="form-label fw-bold">N° Orden</label>
-            <input type="text" name="orden" class="form-control" minlength="10" maxlength="10" pattern="\d{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
+            <input 
+                type="text" 
+                name="orden" 
+                class="form-control"
+                minlength="10" 
+                maxlength="10" 
+                pattern="\d{10}" 
+                oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
+                required>
         </div>
         <div class="col-md-3">
             <label class="form-label fw-bold">Placa</label>
