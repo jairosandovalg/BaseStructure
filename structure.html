@@ -96,6 +96,14 @@
           <td></td> <td></td>
       </tr>                          
   </table>
+    
+  <div class="row g-3 grilla-datos-web">
+      <div class="col-md-3">
+          <label class="form-label fw-bold">N° Orden</label>
+          <input type="text" name="orden" class="form-control" minlength="10" maxlength="10" pattern="\d{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
+      </div>
+  </div>
+
   <table>
       <thead>
           <tr>
