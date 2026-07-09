@@ -68,7 +68,7 @@
                                               /*grilla-datos-web: Es una clase personalizada (no propia de Bootstrap). Seguramente se usa en el archivo CSS del proyecto para darle un estilo único a esa sección de datos (colores, bordes, tipografía, etc.).*/
         
         <div class="col-md-3">                /*Es una columna que, en pantallas medianas o grandes (md), ocupará 3 de los 12 espacios disponibles del ancho total. Es decir, ocupará exactamente el 25% del ancho de la pantalla.*/ 
-                                              /* En pantallas móviles, por defecto, se adaptará para ocupar el 100% para que se lea mejor.*/
+                                              /*En pantallas móviles, por defecto, se adaptará para ocupar el 100% para que se lea mejor.*/
 
             
             <label class="form-label fw-bold">N° Orden</label>
@@ -81,8 +81,22 @@
     </div>
 </head>
 <body>
-
+  <div class="brand-title text-center">PANEL TÉCNICO</div>
   <h2>Reporte de Stock de Repuestos</h2>
+  <table class="tabla-cabecera-pdf">
+      <tr>
+          <td><label class="fw-bold">N° Orden</label><div class="valor-pdf">{{ orden }}</div></td>
+          <td><label class="fw-bold">Placa</label><div class="valor-pdf">{{ placa }}</div></td>
+          <td><label class="fw-bold">Modelo</label><div class="valor-pdf">{{ modelo }}</div></td>
+          <td><label class="fw-bold">Año</label><div class="valor-pdf">{{ anio }}</div></td>
+      </tr>
+      <tr>
+          <td><label class="fw-bold">Motor</label><div class="valor-pdf">{{ motor }}</div></td>
+          <td style="padding-top: 10px;"><label class="fw-bold">Km Inicial</label><div class="valor-pdf">{{ km_inicial }}</div></td>                             
+          <td style="padding-top: 10px;"><label class="fw-bold">Km Final</label><div class="valor-pdf">{{ km_final }}</div></td>
+          <td></td> <td></td>
+      </tr>                          
+  </table>
   <table>
       <thead>
           <tr>
